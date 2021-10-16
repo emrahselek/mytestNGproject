@@ -18,5 +18,7 @@ public class Day11_FirstConfigTest {
         String expectedTitle = ConfigReader.getProperty("app_title");
         Assert.assertEquals(actualTitle,expectedTitle);
         Assert.assertEquals(3,5);
+
     }
+
 }
