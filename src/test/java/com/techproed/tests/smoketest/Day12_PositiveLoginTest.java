@@ -6,7 +6,9 @@ import com.techproed.utilities.ConfigReader;
 import com.techproed.utilities.Driver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 public class Day12_PositiveLoginTest {
+
     @Test
     public void positiveLoginTest(){
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));

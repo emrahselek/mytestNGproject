@@ -21,3 +21,13 @@ If i don't use this, then the report will always shows as PASS.
 *****DAY 11*****
 Oct 12, 2021
 -------------
+
+//Create a clickOnLogin method
+//Click on Hotel Management
+//Click on Hotel Rooms
+//Click on Add Hotel Room
+//Enter All required fields
+//To enter a price, we can send keys, OR we can use actions class to drag and drop
+//Click Save
+//Verify the message: HotelRoom was inserted successfully
+//Click OK
