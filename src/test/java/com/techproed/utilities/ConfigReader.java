@@ -29,9 +29,16 @@ public class ConfigReader {
     //it will take key as String
     //and return the value as String
     //getProperty("app_url"); => "http://www.carettahotel.com/"
+    //KEY: app_url   VALUE:"http://www.carettahotel.com/"
     public static String getProperty(String key){
         String value = properties.getProperty(key);
         return value;
 //        return properties.getProperty(key);
     }
+
+//    //Testing:
+//    public static void main(String[] args) {
+//        String value = ConfigReader.getProperty("browser");
+//        System.out.println(value);
+//    }
 }
