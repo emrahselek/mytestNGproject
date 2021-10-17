@@ -31,6 +31,9 @@ public class HotelRoomsPage {
     @FindBy(id="Price")
     public WebElement price;
 
+    @FindBy(xpath = "//li[@data-id='700']")
+    public WebElement price700;
+
     @FindBy(id="IDGroupRoomType")
     public WebElement selectRoom;
 
@@ -47,7 +50,7 @@ public class HotelRoomsPage {
     public WebElement saveRoom;
 
     @FindBy(xpath = "//div[@class='bootbox-body']")
-    public WebElement verify;
+    public WebElement popupMessage;
 
     @FindBy(xpath = "//button[@class='btn btn-primary']")
     public WebElement clickOk;
