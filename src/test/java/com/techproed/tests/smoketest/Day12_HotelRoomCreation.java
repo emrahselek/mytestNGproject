@@ -29,7 +29,6 @@ public class Day12_HotelRoomCreation {
 
     }
 
-
     @Test
     public void hotelRoomCreate(){
 //Click on Hotel Management
