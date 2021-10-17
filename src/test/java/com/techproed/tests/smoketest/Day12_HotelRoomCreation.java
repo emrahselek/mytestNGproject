@@ -1,5 +1,6 @@
 package com.techproed.tests.smoketest;
 
+import com.github.javafaker.Faker;
 import com.techproed.pages.DefaultPage;
 import com.techproed.pages.HotelRoomsPage;
 import com.techproed.pages.LoginPage;
@@ -15,6 +16,7 @@ public class Day12_HotelRoomCreation {
     LoginPage loginPage;
     DefaultPage defaultPage;
     HotelRoomsPage hotelRoomsPage;
+    Faker faker = new Faker();
 
     @BeforeMethod
     public void setUp(){
@@ -23,6 +25,7 @@ public class Day12_HotelRoomCreation {
         loginPage.username.sendKeys(ConfigReader.getProperty("manager_username"));
         loginPage.password.sendKeys(ConfigReader.getProperty("manager_password"));
         loginPage.loginButton.click();
+
         //asserting login success
         defaultPage= new DefaultPage();
         Assert.assertTrue(defaultPage.addUserButton.isDisplayed());
@@ -30,14 +33,17 @@ public class Day12_HotelRoomCreation {
     }
 
     @Test
-    public void hotelRoomCreate(){
+    public void hotelRoomCreate() throws InterruptedException {
 //Click on Hotel Management
         defaultPage.hotelManagementTab.click();
+
 //Click on Hotel Rooms
         defaultPage.hotelRoomsTab.click();
+
 //Click on Add Hotel Room
         hotelRoomsPage=new HotelRoomsPage();
         hotelRoomsPage.addHotelRoomLink.click();
+
 //Enter All required fields
         //ID IS DROPDOWN
         Select select = new Select(hotelRoomsPage.idDropdown);
@@ -46,9 +52,44 @@ public class Day12_HotelRoomCreation {
         //Code
         hotelRoomsPage.code.sendKeys("discount code");
 
-//To enter a price, we can send keys, OR we can use actions class to drag and drop
-//Click Save
-//Verify the message: HotelRoom was inserted successfully
-//Click OK
+        //Name
+        hotelRoomsPage.name.sendKeys(faker.name().fullName());
+
+        //Location
+        hotelRoomsPage.location.sendKeys(faker.address().city());
+
+        //description
+        hotelRoomsPage.description.sendKeys(faker.company().name());
+
+        //price
+        hotelRoomsPage.price.sendKeys(faker.number().digits(4));
+
+        //selectRoom
+        Select selectRoom = new Select(hotelRoomsPage.selectRoom);
+        selectRoom.selectByVisibleText("King");
+
+        //maxAdultCount
+        hotelRoomsPage.maxAdultCount.sendKeys("2");
+
+        //maxChildCount
+        hotelRoomsPage.maxChildCount.sendKeys("0");
+
+        //approved
+        if(!hotelRoomsPage.isApprove.isSelected()){
+            hotelRoomsPage.isApprove.click();
+        }
+
+        //saveRoom
+        hotelRoomsPage.saveRoom.click();
+
+        //verify
+        Thread.sleep(3000);
+        Assert.assertTrue(hotelRoomsPage.verify.isDisplayed());
+
+
+        //Click OK
+        hotelRoomsPage.clickOk.click();
+
+
     }
 }

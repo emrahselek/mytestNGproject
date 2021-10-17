@@ -8,8 +8,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import java.util.concurrent.TimeUnit;
+
+
 public class Day10_Soft_Assertion {
     WebDriver driver;
+
     @BeforeMethod
     public void setUp(){
         WebDriverManager.chromedriver().setup();
@@ -17,10 +20,12 @@ public class Day10_Soft_Assertion {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
+
     @AfterMethod
     public void tearDown(){
 //        driver.close();
     }
+
     @Test
     public void softAssert(){
         /*
@@ -30,6 +35,7 @@ public class Day10_Soft_Assertion {
          * then verify the page title equals Caretta Hotel - Log in
          *
          * */
+
         driver.get("http://www.carettahotel.com/");
         /*Step 1 : Create SoftAssert object */
         SoftAssert softAssert = new SoftAssert();

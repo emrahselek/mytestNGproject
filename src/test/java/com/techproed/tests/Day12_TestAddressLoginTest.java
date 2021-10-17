@@ -22,5 +22,6 @@ public class Day12_TestAddressLoginTest {
 
         //closing the driver
         Driver.closeDriver();
+
     }
 }

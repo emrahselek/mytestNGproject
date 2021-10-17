@@ -19,8 +19,10 @@ public class TestAddressLoginPage {
     //NOTE: we can locate using all 8 locators
     @FindBy(id="session_email")
     public WebElement email;
+
     @FindBy(xpath = "//input[@id='session_password']")
     public WebElement password;
+
     @FindBy(xpath = "//input[@name ='commit']")
     public WebElement singInButton;
 
