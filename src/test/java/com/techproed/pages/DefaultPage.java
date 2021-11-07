@@ -16,4 +16,7 @@ public class DefaultPage {
 
     @FindBy(partialLinkText = "Hotel Rooms")
     public WebElement hotelRoomsTab;
+
+    @FindBy(xpath = "(//span)[contains(@class,'username')]")
+    public WebElement userID;
 }
