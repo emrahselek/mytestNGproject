@@ -3,11 +3,13 @@
     <test name="smoke-test">
         <packages>
             <package name="com.techproed.tests.smoketest"></package>
+            <package name="com.techproed.dataprovider"></package>
         </packages>
     </test>
 </suite>
-        <!--
+        <!--RUNNING SPECIFIC PACKAGES
         suite  > test > packages >  package
+        TestNG is used for creating customized test execution xml files
         We can run this xml file when we want to execute our smoke test
         In my smoke test there are around 12 test classes
         It takes about 15 mins to complete the test execution

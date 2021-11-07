@@ -48,12 +48,12 @@ public class Day10_TestNGAnnotations {
 //        System.out.println("Test 3");
 //    }
 
-    @Test (priority = -3)
+    @Test (priority = -3, groups="regression-group-1")
     public void test4(){
         System.out.println("Test 4");
     }
 
-    @Test (priority = 2)
+    @Test (priority = 2, groups="regression-group-1")
     public void test5(){
         System.out.println("Test 5");
     }

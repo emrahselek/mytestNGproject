@@ -16,7 +16,6 @@ public class Day13_WebTables {
     DefaultPage defaultPage;
     HotelRoomsPage hotelRoomsPage;
     //    When user goes to HotelRoom page on the application
-    @BeforeMethod
     public void setUp(){
         Driver.getDriver().get(ConfigReader.getProperty("app_url_login"));
         loginPage= new LoginPage();
@@ -33,8 +32,9 @@ public class Day13_WebTables {
         //Click on Add Hotel Room
         hotelRoomsPage=new HotelRoomsPage();
     }
-    @Test
+    @Test(groups = "regression-group-1")
     public void entireTable(){
+        setUp();
 //        Create a test method: entireTable() and print all of headers
         System.out.println("*Entire Table*");
         System.out.println("*Table Body*");
@@ -48,8 +48,9 @@ public class Day13_WebTables {
 //        Create a test method: printColumns() and print Find the total number of columns and Print the elements of the 5th column
 //        Create a test method: printData(int row, int column); This method should print the given cell. Example: printData(2,3); should print 2nd row,3rd column
     }
-    @Test
+    @Test(groups = "regression-group-1")
     public void printRows(){
+        setUp();
         //        Create a test method: printRows() and Print all of the rows and print the element s on the 4th row
         System.out.println("*Print Rows*");
         List<WebElement> allRows = Driver.getDriver().findElements(By.xpath("//tbody//tr"));
@@ -66,6 +67,7 @@ public class Day13_WebTables {
     //    Create a test method: printCells() and a the total number of cells in the table body and print all of the cells
     @Test
     public void printCells(){
+        setUp();
         System.out.println("*Print Cells*");
         List<WebElement> allCells = Driver.getDriver().findElements(By.xpath("//tbody//td"));
         System.out.println("Total Cell Number => " +allCells.size());
@@ -78,6 +80,7 @@ public class Day13_WebTables {
     //    Create a test method: printColumns() and print Find the total number of columns and Print the elements of the 5th column
     @Test
     public void printColumns(){
+        setUp();
         //The number of column equals to the number of th
         List<WebElement> allHeaders = Driver.getDriver().findElements(By.xpath("//th"));
         int numberOfColumn = allHeaders.size();
@@ -90,12 +93,9 @@ public class Day13_WebTables {
             columnNum++;
         }
     }
-
-//    Create a test method: printData(int row, int column);
+    //    Create a test method: printData(int row, int column);
 //    This method should print the given cell.
 //    Example: printData(2,3); should print 2nd row,3rd column
-
-
     @AfterMethod
     public void tearDown(){
         Driver.closeDriver();
