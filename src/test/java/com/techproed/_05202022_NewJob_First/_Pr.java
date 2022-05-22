@@ -3,7 +3,7 @@ package com.techproed._05202022_NewJob_First;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class Pr {
+public class _Pr {
 
     @Test(dataProvider = "dataset")
     public void test(String username, String password, String age){
