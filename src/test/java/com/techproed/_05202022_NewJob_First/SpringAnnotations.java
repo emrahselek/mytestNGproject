@@ -1,6 +1,6 @@
-package com.techproed.dataprovider;
+package com.techproed._05202022_NewJob_First;
 
-public class _EZS_SpringFrameworkAnnotations {
+public class SpringAnnotations {
 
     /*
 

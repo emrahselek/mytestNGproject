@@ -1,16 +1,15 @@
-package com.techproed.dataprovider;
+package com.techproed._05202022_NewJob_First;
 
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class _EZS_DataProvider {
+public class DataProvider {
 
     @Test(dataProvider = "dataSetBest")
     public void test(String username, String password){
         System.out.println(username+"     "+password);
     }
 
-    @DataProvider
+    @org.testng.annotations.DataProvider
     public Object[][] dataSetBest(){
         return new Object[][]{
                              {"user5","pass5"},
@@ -26,7 +25,7 @@ public class _EZS_DataProvider {
 
     }
 
-    @DataProvider
+    @org.testng.annotations.DataProvider
     public Object[][] dataSet() {
         Object[][] dataMan = new Object[3][2];
 

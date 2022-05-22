@@ -1,8 +1,8 @@
-package com.techproed.dataprovider;
+package com.techproed._05202022_NewJob_First;
 
 import org.testng.annotations.Test;
 
-public class _EZS_Test2 {
+public class FactoryAnnotation_part2_Test2 {
 
     @Test
     public void test3() {

@@ -1,4 +1,4 @@
-package com.techproed.dataprovider;
+package com.techproed._05202022_NewJob_First;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

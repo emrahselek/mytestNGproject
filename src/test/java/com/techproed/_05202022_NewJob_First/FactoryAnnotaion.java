@@ -1,12 +1,12 @@
-package com.techproed.dataprovider;
+package com.techproed._05202022_NewJob_First;
 
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 
 /*
 
-    TestNG Factory is useful when you want to run multiple test classes
-    through a single test class. Let’s see a quick example of TestNG Factory annotation.
+    TestNG -  @Factory is useful when you want to run multiple test classes
+    through a single test class.
 
     Sometimes we may need to run a set of tests with different data values.
     To achieve this we may define a separate set of tests inside a suite in
@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
 
      */
 
-public class _EZS_FactoryAnnotaion {
+public class FactoryAnnotaion {
 
     @Test
     public void Test1() {
@@ -30,8 +30,8 @@ public class _EZS_FactoryAnnotaion {
 
     @Factory
     public Object[] factoryMethod() {
-       return new Object[] { new _EZS_FactoryAnnotaion(),
-                            new _EZS_FactoryAnnotaion(),
+       return new Object[] { new FactoryAnnotaion(), new FactoryAnnotaion(),
+                            new FactoryAnnotaion(), new FactoryAnnotaion()
                             };
     }
 }
