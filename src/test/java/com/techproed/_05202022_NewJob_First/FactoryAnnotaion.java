@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 
 /*
 
-    TestNG -  @Factory is useful when you want to run multiple test classes
+    TestNG:  (Same Runner Class) :D
+    @Factory is useful when you want to run multiple test classes
     through a single test class.
 
     Sometimes we may need to run a set of tests with different data values.

@@ -60,11 +60,11 @@ public class SpringAnnotations {
 
         ForExample:
                 @Component("posts")
-                    public class Posts implements Blogafem{
+                    public class POSTS implements Blogafem{
                             public String print() { return "post";}}
 
                 @Component("comments")
-                    public class Comments implements Blogkafem{
+                    public class COMMENTS implements Blogkafem{
                             public String print() { return "comment"; }}
 
                 @Service
@@ -75,7 +75,50 @@ public class SpringAnnotations {
                             }
 
 
+    @Component
+        This annotation is used on classes to indicate a Spring component.
+        The @Component annotation marks the Java class as a bean or say component
+        so that the component-scanning mechanism of Spring can add into the application context.
 
+        [BIR SPRING BILEŞENINI BELIRTMEK IÇIN SINIFLARDA KULLANILIR.
+        BU@BILEŞENAÇIKLAMA, JAVA SINIFINI BIR FASULYE VEYA SAY BILEŞENI OLARAK IŞARETLER,
+        BÖYLECE SPRING'IN BILEŞEN TARAMA MEKANIZMASI UYGULAMA BAĞLAMINA EKLENEBILIR.]
+
+
+
+    @Controller
+        The @Controller annotation is used to indicate the class is a Spring controller.
+        This annotation can be used to identify controllers for Spring MVC or Spring WebFlux.
+
+        [@CONTROLLER EK AÇIKLAMASI, SINIFIN BIR SPRING DENETLEYICISI OLDUĞUNU BELIRTMEK IÇIN KULLANILIR.
+        BU AÇIKLAMA, SPRING MVC VEYA SPRING WEBFLUX IÇIN KONTROLÖRLERI TANIMLAMAK IÇIN KULLANILABILIR.]
+
+
+
+    @Service
+        This annotation is used on a class. The @Service marks a Java class that performs some service,
+        such as execute business logic, perform calculations and call external APIs.
+        This annotation is a specialized form of the @Component annotation intended to be used in the service layer.
+
+        [BU EK AÇIKLAMA BIR SINIFTA KULLANILIR. BU@HIZMETIŞ MANTIĞINI YÜRÜTME, HESAPLAMALAR GERÇEKLEŞTIRME
+        VE HARICI API'LERI ÇAĞIRMA GIBI BAZI HIZMETLERI GERÇEKLEŞTIREN BIR JAVA SINIFINI IŞARETLER.
+        BU EK AÇIKLAMA,@BILEŞENHIZMET KATMANINDA KULLANILMASI AMAÇLANAN AÇIKLAMA.]
+
+
+
+    @Repository
+        This annotation is used on Java classes which directly access the database.
+        The @Repository annotation works as marker for any class that fulfills
+        the role of repository or Data Access Object.
+        This annotation has a automatic translation feature.
+        For example, when an exception occurs in the @Repository there is a handler
+        for that exception and there is no need to add a try catch block.
+
+        [BU AÇIKLAMA, VERITABANINA DOĞRUDAN ERIŞEN JAVA SINIFLARINDA KULLANILIR.
+        BU@DEPOAÇIKLAMA, HAVUZ VEYA VERI ERIŞIM NESNESI ROLÜNÜ YERINE GETIREN
+        HERHANGI BIR SINIF IÇIN IŞARETLEYICI OLARAK ÇALIŞIR.
+        BU NOTUN OTOMATIK ÇEVIRI ÖZELLIĞI VARDIR. ÖRNEĞIN, BIR ISTISNA OLUŞTUĞUNDA@DEPOBU
+        ISTISNA IÇIN BIR IŞLEYICI VAR VE BIR TRY CATCH BLOĞU EKLEMEYE GEREK YOK.]
 
      */
 
