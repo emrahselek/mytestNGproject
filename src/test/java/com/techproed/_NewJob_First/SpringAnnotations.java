@@ -1,4 +1,4 @@
-package com.techproed._05202022_NewJob_First;
+package com.techproed._NewJob_First;
 
 public class SpringAnnotations {
 
@@ -11,9 +11,10 @@ public class SpringAnnotations {
         The @Autowired annotation injects object dependency implicitly.
         We can use this annotation with a constructor, setter, or field injection. Not for primitive/String dataType
 
-        [SPRING CONTEX, CONTAINER ENJEKSIYON NOKTALARINI BULARAK, ORADA BIR NESNE OLUŞTRUR.
+        [SPRING CONTEX, CONTAINER ENJEKSIYON NOKTALARINI BULARAK, ORADA BIR NESNE OLUŞTURUR.
          NEW ANAHTAR KELIMESI ILE BIR NESNE OLUŞTURULMAZ. KULLANILACAK NESNE SPRING TARAFINDAN OLUŞTURULUR.
          BU SAYEDE, DEPENDENCY INJECTION TASARIM KALIBI (DESIGN PATTERN) DA UYGULANMIŞ OLUR.
+
          ÖZETLE @AUTOWIRED YALNIZCA INJECTION IÇIN KULLANILIR. @AUTOWIRED IFADESINI KULLANABILMEK IÇIN,
          HER IKI SINIF DA BEAN SINIFI OLMALI.
          ÖRNEĞIN @SERVICE ANOTASYONU ILE TANIMLANMIŞ BIR SERVIS SINIFI, @REPOSITORY ILE TANIMLANMIŞ BIR SINIFTAN
@@ -81,7 +82,7 @@ public class SpringAnnotations {
         so that the component-scanning mechanism of Spring can add into the application context.
 
         [BIR SPRING BILEŞENINI BELIRTMEK IÇIN SINIFLARDA KULLANILIR.
-        BU@BILEŞENAÇIKLAMA, JAVA SINIFINI BIR FASULYE VEYA SAY BILEŞENI OLARAK IŞARETLER,
+        JAVA SINIFINI BIR FASULYE VEYA SAY BILEŞENI OLARAK IŞARETLER,
         BÖYLECE SPRING'IN BILEŞEN TARAMA MEKANIZMASI UYGULAMA BAĞLAMINA EKLENEBILIR.]
 
 

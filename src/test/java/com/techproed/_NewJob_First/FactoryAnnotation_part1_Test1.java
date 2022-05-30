@@ -1,4 +1,4 @@
-package com.techproed._05202022_NewJob_First;
+package com.techproed._NewJob_First;
 
 import org.testng.annotations.Test;
 

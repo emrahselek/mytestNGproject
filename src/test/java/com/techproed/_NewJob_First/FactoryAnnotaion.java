@@ -1,11 +1,11 @@
-package com.techproed._05202022_NewJob_First;
+package com.techproed._NewJob_First;
 
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 
 /*
 
-    TestNG:  (Same Runner Class) :D
+    TestNG:  (Runner Class gibi) :D
     @Factory is useful when you want to run multiple test classes
     through a single test class.
 
