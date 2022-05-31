@@ -1,4 +1,4 @@
-package com.techproed._NewJob_First;
+package com.techproed._Factory;
 
 import org.testng.annotations.Factory;
 
@@ -11,7 +11,4 @@ public class FactoryAnnotation_part3_FactoryAnn {
         tests[1] = new FactoryAnnotation_part2_Test2();
         return tests;
     }
-
-    ;
-
 }

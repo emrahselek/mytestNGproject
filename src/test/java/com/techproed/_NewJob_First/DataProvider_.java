@@ -1,31 +1,26 @@
 package com.techproed._NewJob_First;
 
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
-public class DataProvider {
+public class DataProvider_ {
 
     @Test(dataProvider = "dataSetBest")
     public void test(String username, String password){
-        System.out.println(username+"     "+password);
+        System.out.println(username+" "+password);
     }
 
-    @org.testng.annotations.DataProvider
+    //1.way
+    @DataProvider
     public Object[][] dataSetBest(){
         return new Object[][]{
                              {"user5","pass5"},
                              {"user6","pass6"}
                              };
 
-//        Object[][] emrah = {
-//                {"emrah","selek"},
-//                {"hakk","emo"},
-//                {"asa","asas"}
-//        };
-//        return emrah;
-
     }
 
-    @org.testng.annotations.DataProvider
+    //2.way
+    @DataProvider
     public Object[][] dataSet() {
         Object[][] dataMan = new Object[3][2];
 
