@@ -4,7 +4,7 @@ public class JacksonAnnotation {
     /*
 
     @JsonInclude
-    JSON verisinde hangi tür verilerin bulunacağını belirtmek için kullanılır.
+    JSON verisin'de hangi tür verilerin bulunacağını belirtmek için kullanılır.
 
     Ex:
     @JsonInclude(Include.NON_NULL)
