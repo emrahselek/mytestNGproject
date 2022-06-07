@@ -11,7 +11,8 @@ public class SpringAnnotations {
         @Repository  :  veritabanı işlemleri gerçekleştiren sınıflarda kullanılır.
         @Service     :  yazılımın bussines logic kısmını gerçekleştiren sınıflar için kullanılır.
         @Controller  :  frontend veya api isteklerinin karşılayan sınıfları tanımlamak için kullanılır
-        @Autowired   :  Constructor, Değişken yada setter metodlar için dependency injection işlemi gerçekleştirir
+        @Autowired   :  injects object dependency implicitly.
+                        Bu annotation sadece " Constructor, Değişken yada Setter" metodlar için dependency injection işlemi gerçekleştirir
 
 
     @Autowired
