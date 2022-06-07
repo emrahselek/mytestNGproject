@@ -34,7 +34,7 @@ public class SpringAnnotations {
          Dolayısıyla service sınıfı içerisinde repository sınıfı için @Autowired işlemi yapılabiliyor.
        * Kısaca @Autowired, bean nesnesinin istenilen alana, başka bir bean nesnesinin alınıp, yerleştirilmesiyle olur.
 
-            #1- Private properties: (custom object) - Field injection
+            #1- Private properties: (custom object) - Field
                     class Car {
                         @Autowired
                         Engine engine;
