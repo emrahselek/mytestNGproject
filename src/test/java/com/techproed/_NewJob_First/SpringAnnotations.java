@@ -17,7 +17,7 @@ public class SpringAnnotations {
 
     @Autowired
         The @Autowired annotation injects object dependency implicitly.
-        We can use this annotation with a constructor, setter, or field (property).
+        We can use this annotation with a constructor, setter, or field (custom Object).
         Not for primitive/String dataType.
 
         [Constructor, Değişken yada setter metodlar için dependency injection işlemi gerçekleştirir.
@@ -100,7 +100,7 @@ public class SpringAnnotations {
                             }
 
     @Component
-        This annotation is used on classes to indicate a Spring component.
+        This annotation is used on classes to indicate(define) a Spring component.
 
        [* Bir sınıfı “Bean” olarak işaretler. (spring tarafından yönetilen bean)
         * Bu sayede Spring’in component tarayıcısı bu sınıfı alıp “App Context” içine ekler.

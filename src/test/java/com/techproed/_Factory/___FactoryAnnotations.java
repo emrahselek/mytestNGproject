@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
     TestNG:(Runner Class gibi) :D
     @Factory annotation is used to specify a method as a factory
     for providing objects to be used by TestNG for test classes.
+
     The method marked with @Factory annotation should return Object array.
     @Factory is useful when you want to run multiple test classes
     through a single test class.
